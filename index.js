@@ -3,6 +3,15 @@ const express = require('express');
 
 const app = express();
 const port = 4000;
+const githubdata = {
+  "message": " Ashish Not Found",
+  "documentation_url": "https://docs.github.com/rest",
+  "status": "404"
+}
+
+app.get('/github',(req,res)=>{
+    res.json(githubdata)
+})
 
 app.get('/', (req, res) => {
     res.send('Hello World Ashish!');
